@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
         children: [
           Container(padding: EdgeInsets.all(20), 
            decoration: BoxDecoration( 
-              color: Colors.grey[600], 
+              color: Colors.grey[300], 
             ),
             child: TextField( 
               controller: _textoControler,
@@ -40,11 +40,12 @@ class Home extends StatelessWidget {
                 border: InputBorder.none,
                 fillColor: Colors.grey[300], 
                 filled: true,
-                hintText: "Ingrsas informacion "
+                hintText: "Ingresas información"
               ),
             ),
           ),
-          TextField(), // TextField adicional sin cambios
+          TextField(), 
+          const SizedBox(height: 10,),
           ElevatedButton(
             onPressed: () {
               // print(_textoControler.text);
@@ -57,6 +58,7 @@ class Home extends StatelessWidget {
             ),
             child: Text("Ir a la página uno"),
           ),
+          const SizedBox(height: 10,), 
           ElevatedButton(
             onPressed: () {
               // print(_textoControler.text);
@@ -74,4 +76,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-

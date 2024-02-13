@@ -5,15 +5,26 @@ class PageStateless extends StatelessWidget {
   
   const PageStateless(this.texto, {Key? key}) : super(key: key); 
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Stateless page"),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text("Stateless page"),
+    ),
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(texto),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context); 
+            },
+            child: Text("Volver"),
+          ),
+        ],
       ),
-      body: Center(
-        child: Text(texto), // Mostrar el texto pasado como argumento
-      ),
-    );
-  }
+    ),
+  );
+ }
 }
